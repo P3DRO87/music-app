@@ -1,0 +1,71 @@
+.main-controller {
+   padding: 10px;
+   background: #242424;
+   height: 100%;
+
+   .track-steps.mt-4 {
+      background: #171717;
+      border-radius: 4px;
+      .btn-container {
+         width: 100%;
+         padding: 10px 0;
+         button {
+            border-radius: 4px;
+            width: 100%;
+            background: #2c2c2c;
+         }
+      }
+   }
+}
+
+.step {
+   padding: 10px;
+   border-radius: 4px;
+   background: #101010;
+   min-height: 50px;
+   transition: box-shadow ease 0.3s;
+   &.active {
+      box-shadow: 1px 1px 8px 0px #ffd700;
+   }
+}
+
+.type-selection {
+   border-radius: 6px;
+   padding: 5px 18px;
+   background: #141414;
+   i {
+      transform: rotate(180deg);
+   }
+}
+
+.right-panel {
+   background: #242424;
+   .row-title {
+      color: #fff;
+      background: #171717;
+      font-size: 1em;
+      padding: 10px;
+      font-weight: 600;
+      border-radius: 4px 4px 0 0;
+   }
+   .chord {
+      background: #8a8989;
+      padding: 15px;
+   }
+   button {
+      background: #141414;
+      margin-bottom: 1rem;
+      padding: 10px 15px;
+   }
+   .hihat-text {
+      position: relative;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      .bar {
+         flex-grow: 2;
+         height: 1px;
+         background: #d3d3d3;
+      }
+   }
+}
