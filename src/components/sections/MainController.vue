@@ -1,6 +1,7 @@
 <script setup>
 import { onUnmounted, ref } from "vue";
 import SelectionBtn from "../fragments/SelectionBtn.vue";
+import BitCounter from "./BitCounter.vue";
 
 const kick = [...Array(4).keys()].map((n) => n + 1);
 
@@ -63,21 +64,7 @@ onUnmounted(() => clearInterval(beatInterval));
                      </div>
                   </div>
                   <div class="col-lg-8">
-                     <div class="btn-container">
-                        <div class="container">
-                           <div class="row g-0 step-container">
-                              <template v-for="step in kick">
-                                 <div class="col-lg-3 mb-2 g-1">
-                                    <div
-                                       :class="`step ${
-                                          step === beatCount ? 'active' : ''
-                                       }`"
-                                    ></div>
-                                 </div>
-                              </template>
-                           </div>
-                        </div>
-                     </div>
+                     <BitCounter boxShadowColor="#FF4500" :compassCount="4" :bpm="100" />
                   </div>
                </div>
                <div class="row">
@@ -90,21 +77,7 @@ onUnmounted(() => clearInterval(beatInterval));
                      </div>
                   </div>
                   <div class="col-lg-8">
-                     <div class="btn-container">
-                        <div class="container">
-                           <div class="row g-0 step-container">
-                              <template v-for="step in kick">
-                                 <div class="col-lg-3 mb-2 g-1">
-                                    <div
-                                       :class="`step ${
-                                          step === beatCount ? 'active' : ''
-                                       }`"
-                                    ></div>
-                                 </div>
-                              </template>
-                           </div>
-                        </div>
-                     </div>
+                     <BitCounter boxShadowColor="#00FFFF" :compassCount="4" :bpm="70" />
                   </div>
                </div>
                <div class="row">
@@ -117,21 +90,7 @@ onUnmounted(() => clearInterval(beatInterval));
                      </div>
                   </div>
                   <div class="col-lg-8">
-                     <div class="btn-container">
-                        <div class="container">
-                           <div class="row g-0 step-container">
-                              <template v-for="step in kick">
-                                 <div class="col-lg-3 mb-2 g-1">
-                                    <div
-                                       :class="`step ${
-                                          step === beatCount ? 'active' : ''
-                                       }`"
-                                    ></div>
-                                 </div>
-                              </template>
-                           </div>
-                        </div>
-                     </div>
+                     <BitCounter boxShadowColor="#9400D3" :compassCount="4" :bpm="120" />
                   </div>
                </div>
                <div class="row">
@@ -147,15 +106,11 @@ onUnmounted(() => clearInterval(beatInterval));
                      <div class="btn-container">
                         <div class="container">
                            <div class="row g-0 step-container">
-                              <template v-for="step in kick">
-                                 <div class="col-lg-3 mb-2 g-1">
-                                    <div
-                                       :class="`step ${
-                                          step === beatCount ? 'active' : ''
-                                       }`"
-                                    ></div>
-                                 </div>
-                              </template>
+                              <BitCounter
+                                 boxShadowColor="red"
+                                 :compassCount="4"
+                                 :bpm="190"
+                              />
                            </div>
                         </div>
                      </div>
